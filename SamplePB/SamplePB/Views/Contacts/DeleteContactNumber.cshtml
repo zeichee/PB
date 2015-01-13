@@ -1,0 +1,41 @@
+﻿@model SamplePB.Models.ContactNumbersViewModel
+
+@{
+    ViewBag.Title = "DeleteContactNumber";
+}
+
+<h2>DeleteContactNumber</h2>
+
+<div>
+    <hr />
+    @using(Html.BeginForm())
+        {
+        @Html.AntiForgeryToken()
+        @Html.HiddenFor(m=>m.PersonId)
+        @Html.HiddenFor(m=>m.ContactId)
+        <dl class="dl-horizontal">
+
+          
+            <dt>
+                @Html.DisplayNameFor(model => model.SelectedContactType)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.SelectedContactType)
+            </dd>
+
+            <dt>
+                @Html.DisplayNameFor(model => model.ContactNumber)
+            </dt>
+
+            <dd>
+                @Html.DisplayFor(model => model.ContactNumber)
+            </dd>
+        </dl>
+
+        <div class="form-actions no-color">
+            <input type="submit" name="Delete" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "ShowAllContacts")
+        </div>
+        }
+</div>

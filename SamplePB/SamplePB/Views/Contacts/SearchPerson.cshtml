@@ -1,0 +1,55 @@
+﻿@model SamplePB.Models.SearchPerson
+
+@{
+    ViewBag.Title = "SearchPerson";
+}
+
+<h2>Search</h2>
+
+<table class="table table-condensed">
+    <tr>
+        <td>
+            @Html.ActionLink("Show all contacts", "ShowAllContacts")
+        </td>
+    </tr>
+</table>
+@using (Html.BeginForm())
+{
+    <table class="table-responsive">
+        
+        <tr>
+            <td>@Html.TextBoxFor(m => m.LastNameOrFirstName)</td>
+        </tr>
+
+        <tr>
+            <th><input id="save" type="submit" value="Search" /></th>
+
+        </tr>
+    </table>
+}
+@{
+    for (int i = 0; i < Model.StoreAllData.Tables[0].Rows.Count; i++)
+    {
+        var personId = Model.StoreAllData.Tables[0].Rows[i]["PersonID"];
+
+        var lastName = Model.StoreAllData.Tables[0].Rows[i]["LastName"].ToString();
+
+        var firstName = Model.StoreAllData.Tables[0].Rows[i]["FirstName"].ToString();
+
+        var middleName = Model.StoreAllData.Tables[0].Rows[i]["MiddleName"].ToString();
+
+
+        <table class="table">
+            <tr>
+                @Html.HiddenFor(m => m.PersonId)
+                <td width="50%"> @lastName @firstName @middleName</td>
+                <th width="20%">@Html.ActionLink("Details", "ShowContactDetails", new { id = personId })</th>
+                <th width="20%">@Html.ActionLink("Edit", "EditContact", new { id = personId })</th>
+                <th width="20%">@Html.ActionLink("Delete", "DeleteContact", new { id = personId })</th>
+                <th width="20%">@Html.ActionLink("Add Email", "InsertPersonEmail", new { id = personId })</th>
+                <th width="20%">@Html.ActionLink("Add Contact Number", "InsertPersonContactNumber", new { id = personId })</th>
+            </tr>
+        </table>
+    }
+}
+

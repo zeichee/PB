@@ -1,0 +1,134 @@
+﻿@using SamplePB.Models
+@model SamplePB.Models.PersonViewModel
+
+@{
+    ViewBag.Title = "ShowContactDetails";
+}
+
+<h2>Contact Details</h2>
+
+<div>
+    <h5>@Html.ActionLink("Back to List","ShowAllContacts")</h5>
+    <h5 >@Html.ActionLink("Add Email", "InsertPersonEmail", new { id = Model.PersonId })</h5>
+    <h5 >@Html.ActionLink("Add Contact Number", "InsertPersonContactNumber", new { id = Model.PersonId })</h5>
+    <hr />@using (Html.BeginForm())
+          {
+              @Html.AntiForgeryToken()
+               @Html.HiddenFor(m => m.PersonId)
+    <dl class="dl-horizontal">
+
+       
+        <dt>
+            @Html.DisplayNameFor(model => model.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.MiddleName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.MiddleName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BirthDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BirthDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HomeAddress)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HomeAddress)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Company)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Company)
+        </dd>
+
+    </dl>
+            
+                }
+    <br/>
+    
+    <th width="20%">@Html.ActionLink("Edit", "EditContact", new { id = Model.PersonId })</th>
+    
+        <br />
+                <table class="table table-bordered">
+                    <tr>
+                        <th>
+                            Contact Type
+                        </th>
+                        <th>
+                            Contact Number
+                        </th>
+                    </tr>
+                    @foreach (var row in Model.ContactNumbersViewModels)
+        {
+            <tr>
+                
+                <td>
+                    @Html.DisplayFor(m => row.SelectedContactType)
+                </td>
+
+                <td>
+                    @Html.DisplayFor(m => row.ContactNumber)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditContactNumber", new { id = row.ContactId})
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteContactNumber", new { id = row.ContactId })
+                </td>
+            </tr>
+        }
+
+                </table>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>
+                            Email Address
+                        </th>
+
+                    </tr>
+                    @foreach (var row in Model.EmailsViewModels)
+        {               
+            <tr>
+                <td>
+                    @Html.DisplayFor(m => row.Emails)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "EditEmail", new { id = row.EmailId})
+                </td>
+                <td>
+                    @Html.ActionLink("Delete", "DeleteEmail", new { id = row.EmailId })
+                </td>
+            </tr>
+        }
+
+                </table>
+</div>
+
+
+
+

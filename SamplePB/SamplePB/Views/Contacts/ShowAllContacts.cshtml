@@ -1,0 +1,49 @@
+﻿@using System.Data
+@model SamplePB.Models.PersonViewModel
+
+@{
+    ViewBag.Title = "Contact List";
+}
+
+<h2>Contact List</h2>
+
+@using (Html.BeginForm())
+{
+    @Html.TextBoxFor(m=>m.SearchString)
+    <input type="submit" value="Search"/>
+
+}
+<br/>
+<table class="table table-responsive">
+    <tr>
+        <th>
+            @Html.ActionLink("Add New Contact","InsertContactPerson")
+        </th>
+    </tr>
+</table>
+
+    @{
+        for (int i = 0; i < Model.StoreAllData.Tables[0].Rows.Count; i++)
+        {
+            var personId = Model.StoreAllData.Tables[0].Rows[i]["PersonID"];
+            
+            var lastName = Model.StoreAllData.Tables[0].Rows[i]["LastName"].ToString();
+
+            var firstName = Model.StoreAllData.Tables[0].Rows[i]["FirstName"].ToString();
+
+            var middleName = Model.StoreAllData.Tables[0].Rows[i]["MiddleName"].ToString();
+
+
+            <table class="table">
+                <tr>
+                    <td width="500%"> @lastName @firstName @middleName</td>
+                    <th width="10%">@Html.ActionLink("Details", "ShowContactDetails", new { id = personId })</th>
+                    <th width="10%">@Html.ActionLink("Edit", "EditContact", new { id = personId })</th>
+                    <th width="10%">@Html.ActionLink("Delete", "DeleteContact", new { id = personId })</th>
+
+                </tr>
+            </table>
+        }
+    }
+
+
