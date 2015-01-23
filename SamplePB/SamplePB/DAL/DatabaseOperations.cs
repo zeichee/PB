@@ -506,6 +506,20 @@ namespace SamplePB.DAL
             da.Fill(ds);
             return ds;
         }
+
+        public DataSet GetPicture(int id)
+        {
+            var model = new PersonViewModel();
+            var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
+            var cmd = new SqlCommand("uspGetImage", con) { CommandType = CommandType.StoredProcedure };
+            cmd.Parameters.AddWithValue("@PersonID", id);
+
+            con.Open();
+            var da = new SqlDataAdapter { SelectCommand = cmd };
+            var ds = new DataSet();
+            da.Fill(ds);
+            return ds;
+        }
     }
 
 }

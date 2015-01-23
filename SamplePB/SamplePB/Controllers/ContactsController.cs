@@ -267,16 +267,16 @@ namespace SamplePB.Controllers
         {
             if (ModelState.IsValid)
             {
-
                 var obj = new DatabaseOperations();
                 obj.AddContactNumbers(cModel);
                 ModelState.Clear();
+
                 return RedirectToAction("ShowContactDetails", "Contacts", new { id = cModel.PersonId });
 
             }
             else
             {
-
+                TempData["AlertMessage"] = "Please insert a valid contact number!";
                 return RedirectToAction("InsertPersonContactNumber", "Contacts", new {id = cModel.PersonId});
             }
         }
@@ -396,12 +396,22 @@ namespace SamplePB.Controllers
         public ActionResult ChangeProfilePicture(int id, PersonViewModel model)
         {
             model.PersonId = id;
+            var objDb = new DatabaseOperations();
+
+            var ds = objDb.GetPicture(id);
+
+            model.ActualImage = (byte[])ds.Tables[0].Rows[0]["ProfilePic"];
+            model.ContentType = ds.Tables[0].Rows[0]["ContentType"].ToString();
             return View(model);
         }
 
         [HttpPost]
         public ActionResult ChangeProfilePicture(PersonViewModel model)
         {
+
+
+
+
             HttpPostedFileBase file = Request.Files["OriginalLocation"];
             model.ContentType = file.ContentType;
             Int32 length = file.ContentLength;
@@ -536,6 +546,19 @@ namespace SamplePB.Controllers
 
 
             return File(renderedBytes, mimeType);
+        }
+
+        public ActionResult ShowPhoto(int id)
+        {
+            var objDb = new DatabaseOperations();
+
+            var ds = objDb.GetPicture(id);
+            var pModel = new PersonViewModel();
+
+            pModel.ActualImage = (byte[])ds.Tables[0].Rows[0]["ProfilePic"];
+            pModel.ContentType = ds.Tables[0].Rows[0]["ContentType"].ToString();
+            return File(pModel.ActualImage, pModel.ContentType);
+
         }
 
     }

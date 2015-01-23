@@ -2,6 +2,8 @@
 
 @{
     ViewBag.Title = "ChangeProfilePicture";
+    var base64 = Convert.ToBase64String(Model.ActualImage);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
 }
 
 <h2>ChangeProfilePicture</h2>
@@ -9,7 +11,7 @@
 <form action="/Contacts/ChangeProfilePicture" method="post" enctype="multipart/form-data">
     @Html.HiddenFor(m => m.PersonId)
     <input type="file" accept="image/*" onchange="loadFile(event)" name="OriginalLocation" id="OriginalLocation">
-    <img id="output" height="100" width="100" src="../../images/AddContact.png"/>
+    <img id="output" height="100" width="100" src="@imgSrc" />
     <script>
         var loadFile = function (event) {
             var output = document.getElementById('output');

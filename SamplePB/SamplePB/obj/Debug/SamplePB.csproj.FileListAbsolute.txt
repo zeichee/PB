@@ -260,3 +260,31 @@ C:\Users\GINNO\Desktop\git\PB\SamplePB\SamplePB\obj\Debug\RdlCompile.cache
 C:\Users\GINNO\Desktop\git\PB\SamplePB\SamplePB\obj\Debug\RdlCompile.compiled
 C:\Users\GINNO\Desktop\git\PB\SamplePB\SamplePB\obj\Debug\SamplePB.dll
 C:\Users\GINNO\Desktop\git\PB\SamplePB\SamplePB\obj\Debug\SamplePB.pdb
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\SamplePB.dll.config
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\SamplePB.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\SamplePB.pdb
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\WebGrease.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\obj\Debug\SamplePB.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\obj\Debug\RdlCompile.cache
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\obj\Debug\RdlCompile.compiled
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\obj\Debug\SamplePB.dll
+C:\Users\Admin\Desktop\New folder\PB\SamplePB\SamplePB\obj\Debug\SamplePB.pdb
