@@ -436,6 +436,28 @@ namespace SamplePB.DAL
                 return result = "";
             }
         }
+
+        public DataSet SelectLastInsertPerson(PersonViewModel model)
+        {
+            SqlConnection con = null;
+            DataSet ds = null;
+            try
+            {
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
+                var cmd = new SqlCommand("uspSelectLastInsertedPerson", con) { CommandType = CommandType.StoredProcedure };
+                con.Open();
+                var da = new SqlDataAdapter { SelectCommand = cmd };
+                ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+            catch
+            {
+                return ds;
+            }
+          
+          
+        }
     }
 
 }

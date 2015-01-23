@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Net.Mail;
+using System.Security.Principal;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
@@ -152,7 +153,10 @@ namespace SamplePB.Controllers
                 smtp.Send(mail);
              
                 ModelState.Clear();
-                return RedirectToAction("ShowAllContacts", "Contacts");
+
+                var ds = obj.SelectLastInsertPerson(model);
+                model.PersonId = Convert.ToInt32(ds.Tables[0].Rows[0]["PersonID"].ToString());
+                return RedirectToAction("ShowContactDetails", "Contacts", new { id = model.PersonId });
             }
 
             return View();
@@ -406,5 +410,8 @@ namespace SamplePB.Controllers
             obj.ChangeProfilePicture(model);
             return RedirectToAction("ShowContactDetails", "Contacts", new { id = model.PersonId });
         }
+
+
+
     }
 }

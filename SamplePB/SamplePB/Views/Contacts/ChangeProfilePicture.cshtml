@@ -8,7 +8,6 @@
 
 <form action="/Contacts/ChangeProfilePicture" method="post" enctype="multipart/form-data">
     @Html.HiddenFor(m => m.PersonId)
-
     <input type="file" accept="image/*" onchange="loadFile(event)" name="OriginalLocation" id="OriginalLocation">
     <img id="output" height="100" width="100" />
     <script>
@@ -17,5 +16,6 @@
             output.src = URL.createObjectURL(event.target.files[0]);
         };
     </script><br/>
-    <input type="submit" value="Save" class="btn btn-success" />
+    <br />
+    <input type="submit" value="Save" class="btn btn-success" />&nbsp;@Html.ActionLink("Cancel", "ShowContactDetails", new { id = Model.PersonId })
 </form>
