@@ -1,23 +1,31 @@
-﻿@using SamplePB.Models
-@model SamplePB.Models.PersonViewModel
+﻿@model SamplePB.Models.PersonViewModel
 
 @{
     ViewBag.Title = "ShowContactDetails";
+    var base64 = Convert.ToBase64String(Model.ActualImage);
+    var imgSrc = String.Format("data:image/gif;base64,{0}", base64);
+    
 }
 
 <h2>Contact Details</h2>
 
 <div>
     <h5>@Html.ActionLink("Back to List","ShowAllContacts")</h5>
-    <h5 >@Html.ActionLink("Add Email", "InsertPersonEmail", new { id = Model.PersonId })</h5>
-    <h5 >@Html.ActionLink("Add Contact Number", "InsertPersonContactNumber", new { id = Model.PersonId })</h5>
+    <a href="@Url.Action("InsertPersonContactNumber", "Contacts", new { id = Model.PersonId })"><img src="../../images/AddContactNumber.png" height="35" width="125" /></a><br/>
+    <a href="@Url.Action("InsertPersonEmail", "Contacts", new { id = Model.PersonId })"><img src="../../images/AddEmail.png" height="35" width="125" /></a>
     <hr />@using (Html.BeginForm())
           {
               @Html.AntiForgeryToken()
                @Html.HiddenFor(m => m.PersonId)
     <dl class="dl-horizontal">
-
-       
+        <dt>
+            Picture
+        </dt>
+        <dd>
+            <img src="@imgSrc" width="100" height="100" /><br/>
+            @Html.ActionLink("Change Picture", "ChangeProfilePicture", new { id = Model.PersonId })
+        </dd>
+        
         <dt>
             @Html.DisplayNameFor(model => model.FirstName)
         </dt>
@@ -74,7 +82,7 @@
     <th width="20%">@Html.ActionLink("Edit", "EditContact", new { id = Model.PersonId })</th>
     
         <br />
-                <table class="table table-bordered">
+                <table class="table table-condensed">
                     <tr>
                         <th>
                             Contact Type
@@ -94,7 +102,7 @@
                 <td>
                     @Html.DisplayFor(m => row.ContactNumber)
                 </td>
-                <td>
+                <td width ="10%">
                     @Html.ActionLink("Edit", "EditContactNumber", new { id = row.ContactId})
                 </td>
                 <td>
@@ -104,7 +112,7 @@
         }
 
                 </table>
-                <table class="table table-bordered">
+                <table class="table table-condensed">
                     <tr>
                         <th>
                             Email Address

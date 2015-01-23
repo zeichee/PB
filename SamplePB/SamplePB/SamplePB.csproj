@@ -109,6 +109,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="images\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -116,12 +117,15 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SendMailerController.cs" />
     <Compile Include="DAL\DatabaseOperations.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\ContactNumbersViewModel.cs" />
     <Compile Include="Models\EmailsViewModel.cs" />
+    <Compile Include="Models\ImageResult.cs" />
+    <Compile Include="Models\MailModel.cs" />
     <Compile Include="Models\PersonViewModel.cs" />
     <Compile Include="Models\PhoneType.cs" />
     <Compile Include="Models\SearchPerson.cs" />
@@ -170,6 +174,8 @@
     <Content Include="Views\Contacts\EditEmail.cshtml" />
     <Content Include="Views\Contacts\DeleteEmail.cshtml" />
     <Content Include="Views\Contacts\SearchPerson.cshtml" />
+    <Content Include="Views\SendMailer\Index.cshtml" />
+    <Content Include="Views\Contacts\ChangeProfilePicture.cshtml" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>

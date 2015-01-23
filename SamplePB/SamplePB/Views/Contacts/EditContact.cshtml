@@ -6,13 +6,7 @@
 
 <h2>Edit Contact</h2>
 
-<table class="table table-condensed">
-    <tr>
-        <td>
-            @Html.ActionLink("Show all contacts", "ShowAllContacts")
-        </td>
-    </tr>
-</table>
+
 <br/>
 
 @using (Html.BeginForm())
@@ -79,6 +73,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-success" />
+                @Html.ActionLink("Cancel", "ShowContactDetails",new {id = Model.PersonId})
             </div>
         </div>
     </div>

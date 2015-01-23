@@ -4,13 +4,14 @@
     ViewBag.Title = "Insert Person Contact Number";
 }
 
-<h2>Insert Contact Number</h2>
+<h2>Add New Contact Number</h2>
 
 @using (Html.BeginForm())
 {
    <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true)
+       @Html.HiddenFor(m=>m.ContactId)
         @Html.HiddenFor(m=>m.PersonId)
         <table class=" table table-bordered">
             <tr><td>
@@ -18,7 +19,7 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.SelectedContactType, new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.SelectedContactType)
+                            @Html.DropDownListFor(x => x.SelectedContactType, Model.ContactType)
                             @Html.ValidationMessageFor(model => model.SelectedContactType)
                         </div>
                     </div>
@@ -35,6 +36,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-success" />
+                @Html.ActionLink("Cancel", "ShowContactDetails", new { id = Model.PersonId })
             </div>
         </div>
     </div>

@@ -4,7 +4,7 @@
     ViewBag.Title = "InsertPersonEmail";
 }
 
-<h2>Add Email</h2>
+<h2>Add New Email</h2>
 
 @using (Html.BeginForm())
 {
@@ -28,6 +28,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-success" />
+                @Html.ActionLink("Cancel", "ShowContactDetails", new { id = Model.PersonId })
             </div>
         </div>
     </div>

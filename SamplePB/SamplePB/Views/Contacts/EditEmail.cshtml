@@ -4,7 +4,7 @@
     ViewBag.Title = "EditEmail";
 }
 
-<h2>EditEmail</h2>
+<h2>Edit Email</h2>
 
 @using (Html.BeginForm())
 {
@@ -12,6 +12,7 @@
         <hr />
         @Html.ValidationSummary(true)
         @Html.HiddenFor(m=>m.EmailId)
+        @Html.HiddenFor(m=>m.PersonId)
         <table class=" table table-bordered">
             <tr><td>
                     <div class="form-group">
@@ -27,6 +28,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-success" />
+                @Html.ActionLink("Cancel", "ShowContactDetails", new { id = Model.PersonId })
             </div>
         </div>
     </div>

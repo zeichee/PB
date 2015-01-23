@@ -13,6 +13,7 @@ namespace SamplePB.Models
 
         public int PersonId { get; set; }
 
+        [Required]
         [Display(Name = "Email Address")]
         [StringLength(40)]
         [DataType(DataType.EmailAddress)]

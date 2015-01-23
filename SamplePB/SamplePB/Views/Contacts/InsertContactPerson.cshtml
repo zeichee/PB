@@ -4,20 +4,23 @@
     ViewBag.Title = "Insert Contact Person";
 }
 
-<h2>Add Contact Person</h2>
+<h2>New Contact</h2>
 
-@Html.ActionLink("Show all contacts","ShowAllContacts")
- 
-@using (Html.BeginForm())
+
+
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true)
         <table class=" table table-bordered">
-            <tr><td>
-                    
+            <tr>
+                <td>
+                    <label for="file">Filename:</label>
+
+                    <input type="file" name="OriginalLocation" id="OriginalLocation" />
                     <div class="form-group">
                         @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
@@ -41,7 +44,7 @@
                             @Html.ValidationMessageFor(model => model.MiddleName)
                         </div>
                     </div>
-                
+
                     <div class="form-group">
                         @Html.LabelFor(model => model.BirthDate, new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
@@ -63,17 +66,19 @@
                             @Html.ValidationMessageFor(model => model.Company)
                         </div>
                     </div>
+
                 </td>
 
             </tr>
         </table>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-success" />
+                <input type="submit" value="Save" class="btn btn-success" name="submit" />
+                @Html.ActionLink("Cancel", "ShowAllContacts")
             </div>
         </div>
     </div>
-   
+
 }
 
 @section Scripts {

@@ -4,7 +4,7 @@
     ViewBag.Title = "DeleteContactNumber";
 }
 
-<h2>DeleteContactNumber</h2>
+<h2>Delete Contact Number</h2>
 
 <div>
     <hr />
@@ -35,7 +35,7 @@
 
         <div class="form-actions no-color">
             <input type="submit" name="Delete" value="Delete" class="btn btn-danger" /> |
-            @Html.ActionLink("Back to List", "ShowAllContacts")
+            @Html.ActionLink("Cancel", "ShowContactDetails", new { id = Model.PersonId })
         </div>
         }
 </div>

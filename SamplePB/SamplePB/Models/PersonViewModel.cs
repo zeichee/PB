@@ -19,18 +19,31 @@ namespace SamplePB.Models
         public string SearchString { get; set; }
 
         public int PersonId { get; set; }
-        [StringLength(20)]
+
+        public String ContentType { get; set; }
+
+        public Byte[] ActualImage { get; set; }
+
+        [Required]
+        [StringLength(20,MinimumLength = 2)]
         [Display(Name = "Last Name")]
         public string LastName { get; set; }
-        [StringLength(20)]
+
+        [Required]
+        [StringLength(20, MinimumLength = 2)]
         [Display(Name = "First Name")]
         public string FirstName { get; set; }
-        [StringLength(20)]
+
+        [Required]
+        [StringLength(20, MinimumLength = 2)]
         [Display(Name = "Middle Name")]
         public string MiddleName { get; set; }
 
+        
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
                ApplyFormatInEditMode = true)]
+        [DataType(DataType.DateTime)]
+        [StringLength(10, MinimumLength = 10,ErrorMessage = "Format: MM/DD/YYYY")]
         [Display(Name = "Birth Date")]
         public string BirthDate { get; set; }
 
@@ -43,7 +56,11 @@ namespace SamplePB.Models
         public string Company { get; set; }
         public DataSet StoreAllData { get; set; }
 
+        
         public List<ContactNumbersViewModel> ContactNumbersViewModels { get; set; }
+        [Required]
         public List<EmailsViewModel> EmailsViewModels { get; set; }
+
+
     }
 }

@@ -17,24 +17,11 @@
         @Html.HiddenFor(m => m.PersonId)
         <table class=" table table-bordered">
             <tr><td>
-                <div class="form-group">
-                    @Html.LabelFor(model => model.ContactId, new { @class = "control-label col-md-2" })
-                    <div class="col-md-10">
-                        @Html.EditorFor(model => model.ContactId)
-                        @Html.ValidationMessageFor(model => model.ContactId)
-                    </div>
-                </div>
-                    <div class="form-group">
-                        @Html.LabelFor(model => model.PersonId, new { @class = "control-label col-md-2" })
-                        <div class="col-md-10">
-                            @Html.EditorFor(model => model.PersonId)
-                            @Html.ValidationMessageFor(model => model.PersonId)
-                        </div>
-                    </div>
+              
                     <div class="form-group">
                         @Html.LabelFor(model => model.SelectedContactType, new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.SelectedContactType)
+                            @Html.DropDownListFor(x => x.SelectedContactType, Model.ContactType)
                             @Html.ValidationMessageFor(model => model.SelectedContactType)
                         </div>
                     </div>
@@ -51,6 +38,7 @@
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Save" class="btn btn-success" />
+                @Html.ActionLink("Cancel", "ShowContactDetails", new { id = Model.PersonId })
             </div>
         </div>
     </div>

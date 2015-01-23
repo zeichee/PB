@@ -1,0 +1,16 @@
+﻿@model SamplePB.Models.PersonViewModel
+
+@{
+    ViewBag.Title = "ChangeProfilePicture";
+}
+
+<h2>ChangeProfilePicture</h2>
+
+<form action="/Contacts/ChangeProfilePicture" method="post" enctype="multipart/form-data">
+    @Html.HiddenFor(m => m.PersonId)
+
+    <label for="file">Filename:</label>
+    <input type="file" name="OriginalLocation" id="OriginalLocation" />
+
+    <input type="submit" name="submit" value="Submit" />
+</form>

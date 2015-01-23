@@ -4,12 +4,13 @@
     ViewBag.Title = "DeleteEmail";
 }
 
-<h2>DeleteEmail</h2>
+<h2>Delete Email</h2>
 @using (Html.BeginForm())
 {
     @Html.AntiForgeryToken()
     <dl class="dl-horizontal">
         @Html.HiddenFor(m=>m.EmailId)
+        @Html.HiddenFor(m=>m.PersonId)
        <dt>
             Email Address
         </dt>
@@ -21,6 +22,6 @@
 
     <div >
         <input type="submit" name="Delete" value="Delete" class="btn btn-danger" /> 
-        @Html.ActionLink("Back", "ShowContactDetails")
+       @Html.ActionLink("Cancel", "ShowContactDetails", new { id = Model.PersonId })
     </div>
 }

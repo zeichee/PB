@@ -20,6 +20,8 @@ namespace SamplePB.DAL
             {
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
                 var cmd = new SqlCommand("uspContactPersonAddition", con) {CommandType = CommandType.StoredProcedure};
+                cmd.Parameters.AddWithValue("@ProfilePic", model.ActualImage);
+                cmd.Parameters.AddWithValue("@ContentType", model.ContentType);
                 cmd.Parameters.AddWithValue("@LastName", model.LastName);
                 cmd.Parameters.AddWithValue("@FirstName", model.FirstName);
                 cmd.Parameters.AddWithValue("@MiddleName", model.MiddleName);
@@ -412,6 +414,26 @@ namespace SamplePB.DAL
             finally
             {
                 if (con != null) con.Close();
+            }
+        }
+        public string ChangeProfilePicture(PersonViewModel model)
+        {
+            string result = "";
+            try
+            {
+                var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
+                var cmd = new SqlCommand("uspChangeProfilePic", con) { CommandType = CommandType.StoredProcedure };
+                cmd.Parameters.AddWithValue("@PersonID", model.PersonId);
+                cmd.Parameters.AddWithValue("@ProfilePic", model.ActualImage);
+                cmd.Parameters.AddWithValue("@ContentType", model.ContentType);
+
+                con.Open();
+                result = cmd.ExecuteScalar().ToString();
+                return result;
+            }
+            catch
+            {
+                return result = "";
             }
         }
     }
