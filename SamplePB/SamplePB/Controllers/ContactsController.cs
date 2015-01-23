@@ -271,7 +271,7 @@ namespace SamplePB.Controllers
             else
             {
 
-                return View(cModel);
+                return RedirectToAction("InsertPersonContactNumber", "Contacts", new {id = cModel.PersonId});
             }
         }
 

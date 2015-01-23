@@ -18,9 +18,17 @@
         <table class=" table table-bordered">
             <tr>
                 <td>
-                    <label for="file">Filename:</label>
 
-                    <input type="file" name="OriginalLocation" id="OriginalLocation" />
+
+                    <input type="file" accept="image/*" onchange="loadFile(event)" name="OriginalLocation" id="OriginalLocation">
+                    <img id="output" height="100" width="100" />
+                    <script>
+                        var loadFile = function (event) {
+                            var output = document.getElementById('output');
+                            output.src = URL.createObjectURL(event.target.files[0]);
+                        };
+                    </script>
+                    
                     <div class="form-group">
                         @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
