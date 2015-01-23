@@ -1,15 +1,17 @@
 ﻿@model SamplePB.Models.MailModel
-
 @{
     ViewBag.Title = "Index";
 }
-
 <h2>Index</h2>
 <fieldset>
-    <legend>Send Email</legend>
+    <legend>
+        Send Email
+    </legend>
     @using (Html.BeginForm())
     {
         @Html.ValidationSummary()
+        <p>From: </p>
+        <p>@Html.TextBoxFor(m => m.From)</p>
         <p>To: </p>
         <p>@Html.TextBoxFor(m => m.To)</p>
         <p>Subject: </p>

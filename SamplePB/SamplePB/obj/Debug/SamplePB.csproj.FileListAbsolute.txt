@@ -102,36 +102,107 @@ C:\Users\win8\Desktop\Phonebook backup\SamplePB\SamplePB\bin\Antlr3.Runtime.pdb
 C:\Users\win8\Desktop\Phonebook backup\SamplePB\SamplePB\obj\Debug\SamplePB.csprojResolveAssemblyReference.cache
 C:\Users\win8\Desktop\Phonebook backup\SamplePB\SamplePB\obj\Debug\SamplePB.dll
 C:\Users\win8\Desktop\Phonebook backup\SamplePB\SamplePB\obj\Debug\SamplePB.pdb
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\SamplePB.dll.config
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\SamplePB.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\SamplePB.pdb
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\Antlr3.Runtime.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\Microsoft.Web.Infrastructure.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\Newtonsoft.Json.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.Helpers.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.Mvc.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.Optimization.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.Razor.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.WebPages.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\WebGrease.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.Helpers.xml
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.Mvc.xml
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.Optimization.xml
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.Razor.xml
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.WebPages.xml
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.xml
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.xml
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\Newtonsoft.Json.xml
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\Antlr3.Runtime.pdb
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\obj\Debug\SamplePB.csprojResolveAssemblyReference.cache
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\obj\Debug\SamplePB.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\obj\Debug\SamplePB.pdb
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\Microsoft.ReportViewer.Common.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\Microsoft.ReportViewer.ProcessingObjectModel.DLL
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\Microsoft.ReportViewer.WebForms.DLL
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\MvcReportViewer.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\bin\ReportViewerForMvc.dll
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\obj\Debug\RdlCompile.cache
-C:\Users\GINNO\Desktop\New folder (4)\SamplePB\SamplePB\obj\Debug\RdlCompile.compiled
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\SamplePB.dll.config
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\SamplePB.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\SamplePB.pdb
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\WebGrease.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\obj\Debug\SamplePB.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\obj\Debug\SamplePB.dll
+C:\Users\Admin\Desktop\git\SamplePB\SamplePB\obj\Debug\SamplePB.pdb
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\SamplePB.dll.config
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\SamplePB.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\SamplePB.pdb
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\Antlr3.Runtime.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\Newtonsoft.Json.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.Helpers.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.Mvc.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.Optimization.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.Razor.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.WebPages.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\WebGrease.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.Helpers.xml
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.Mvc.xml
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.Optimization.xml
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.Razor.xml
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.WebPages.xml
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.xml
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.xml
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\Newtonsoft.Json.xml
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\bin\Antlr3.Runtime.pdb
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\obj\Debug\SamplePB.csprojResolveAssemblyReference.cache
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\obj\Debug\SamplePB.dll
+C:\Users\win8\Desktop\github\SamplePB\SamplePB\obj\Debug\SamplePB.pdb
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\SamplePB.dll.config
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\SamplePB.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\SamplePB.pdb
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\WebGrease.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\obj\Debug\SamplePB.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\obj\Debug\SamplePB.dll
+C:\Users\Admin\Desktop\project-mi-ed-vss\SamplePB\SamplePB\obj\Debug\SamplePB.pdb
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\SamplePB.dll.config
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\SamplePB.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\SamplePB.pdb
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\Antlr3.Runtime.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\Newtonsoft.Json.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.Helpers.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.Mvc.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.Optimization.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.Razor.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.WebPages.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\WebGrease.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.Helpers.xml
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.Mvc.xml
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.Optimization.xml
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.Razor.xml
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.WebPages.xml
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\System.Web.WebPages.Razor.xml
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\Newtonsoft.Json.xml
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\bin\Antlr3.Runtime.pdb
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\obj\Debug\SamplePB.csprojResolveAssemblyReference.cache
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\obj\Debug\SamplePB.dll
+C:\Users\Admin\Desktop\backup with image upload\SamplePB\SamplePB\obj\Debug\SamplePB.pdb

@@ -13,6 +13,8 @@ namespace SamplePB.Models
         public int ContactId { get; set; }
         public int PersonId { get; set; }
 
+        public IEnumerable<SelectListItem> ContactType { get; set; }
+
         [Required]
         [StringLength(11, MinimumLength = 3)]
         [Display(Name = "Contact Type")]
