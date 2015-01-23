@@ -458,6 +458,54 @@ namespace SamplePB.DAL
           
           
         }
+
+        public DataSet GetDataTablesForReportContactList()
+        {
+            SqlConnection con = null;
+            DataSet ds = null;
+            try
+            {
+                con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
+                var cmd = new SqlCommand("uspContactList", con) { CommandType = CommandType.StoredProcedure };
+                con.Open();
+                var da = new SqlDataAdapter { SelectCommand = cmd };
+                ds = new DataSet();
+                da.Fill(ds);
+                return ds;
+            }
+            catch
+            {
+                return ds;
+            }
+            finally
+            {
+                if (con != null) con.Close();
+            }
+        }
+
+        public DataSet GetDataTablesForReportPersonalDetail(int id)
+        {
+
+
+            //storedproc
+            var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
+            var cmd = new SqlCommand("uspContactShowDetail", con);
+
+            var ds = new DataSet();
+            var da = new SqlDataAdapter();
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@PersonID", id);
+            con.Open();
+
+            da.SelectCommand = cmd;
+
+            da.TableMappings.Add("Table", "tblPerson");
+            da.TableMappings.Add("Table1", "tblContactNumbers");
+            da.TableMappings.Add("Table2", "tblEmails");
+            da.Fill(ds);
+            return ds;
+        }
     }
 
 }

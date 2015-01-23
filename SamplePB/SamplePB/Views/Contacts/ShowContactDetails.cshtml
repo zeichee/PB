@@ -9,6 +9,13 @@
 
 <h2>Contact Details</h2>
 
+<div style="padding: 10px;">
+    | <a href="@Url.Action("ReportPersonDetail", new { format = "PDF", id = Model.PersonId  })">Export to PDF</a> |
+    <a href="@Url.Action("ReportPersonDetail", new { format = "Excel", id = Model.PersonId })">Export to Excel</a> |
+    <a href="@Url.Action("ReportPersonDetail", new { format = "Word", id = Model.PersonId })">Export to Word</a> |
+    <a href="@Url.Action("ReportPersonDetail", new { format = "Image", id = Model.PersonId })">Export to Image</a> |
+</div>
+
 <div>
     <h5>@Html.ActionLink("Back to List","ShowAllContacts")</h5>
     <a href="@Url.Action("InsertPersonContactNumber", "Contacts", new { id = Model.PersonId })"><img src="../../images/AddContactNumber.png" height="35" width="125" /></a><br/>
