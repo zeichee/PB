@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Data.Objects;
 using System.IO;
 using System.Net.Mail;
 using System.Security.Principal;
@@ -410,18 +411,26 @@ namespace SamplePB.Controllers
         {
 
 
-
-
+           
+            
             HttpPostedFileBase file = Request.Files["OriginalLocation"];
+
             model.ContentType = file.ContentType;
             Int32 length = file.ContentLength;
             byte[] tempImage = new byte[length];
             file.InputStream.Read(tempImage, 0, length);
             model.ActualImage = tempImage;
+            if (file.FileName != "")
+            {
             var obj = new DatabaseOperations();
             obj.ChangeProfilePicture(model);
-            return RedirectToAction("ShowContactDetails", "Contacts", new { id = model.PersonId });
-        }
+            return RedirectToAction("ShowContactDetails", "Contacts", new {id = model.PersonId});
+            }
+            else
+            {
+                return RedirectToAction("ShowContactDetails", "Contacts", new {id = model.PersonId});
+            }
+    }
 
         public ActionResult Report(string format)
         {
