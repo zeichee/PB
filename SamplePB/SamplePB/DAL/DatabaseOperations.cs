@@ -20,8 +20,6 @@ namespace SamplePB.DAL
             {
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
                 var cmd = new SqlCommand("uspContactPersonAddition", con) {CommandType = CommandType.StoredProcedure};
-                cmd.Parameters.AddWithValue("@ProfilePic", model.ActualImage);
-                cmd.Parameters.AddWithValue("@ContentType", model.ContentType);
                 cmd.Parameters.AddWithValue("@LastName", model.LastName);
                 cmd.Parameters.AddWithValue("@FirstName", model.FirstName);
                 cmd.Parameters.AddWithValue("@MiddleName", model.MiddleName);
@@ -152,6 +150,7 @@ namespace SamplePB.DAL
             {
                 con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
                 var cmd = new SqlCommand("uspContactShowDetail", con);
+                
                 ds = new DataSet();
                 var da = new SqlDataAdapter();
             
@@ -416,26 +415,58 @@ namespace SamplePB.DAL
                 if (con != null) con.Close();
             }
         }
-        public string ChangeProfilePicture(PersonViewModel model)
-        {
-            string result = "";
-            try
-            {
-                var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
-                var cmd = new SqlCommand("uspChangeProfilePic", con) { CommandType = CommandType.StoredProcedure };
-                cmd.Parameters.AddWithValue("@PersonID", model.PersonId);
-                cmd.Parameters.AddWithValue("@ProfilePic", model.ActualImage);
-                cmd.Parameters.AddWithValue("@ContentType", model.ContentType);
 
-                con.Open();
-                result = cmd.ExecuteScalar().ToString();
-                return result;
-            }
-            catch
-            {
-                return result = "";
-            }
+        public DataSet GetDataTablesForReportContactList()
+        {
+                SqlConnection con = null;
+                DataSet ds = null;
+                try
+                {
+                    con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
+                    var cmd = new SqlCommand("uspContactList", con) { CommandType = CommandType.StoredProcedure };
+                    con.Open();
+                    var da = new SqlDataAdapter { SelectCommand = cmd };
+                    ds = new DataSet();
+                    da.Fill(ds);
+                    return ds;
+                }
+                catch
+                {
+                    return ds;
+                }
+                finally
+                {
+                    if (con != null) con.Close();
+                }
+          }
+
+
+        public DataSet GetDataTablesForReportPersonalDetail(int id)
+        {
+          
+            
+            //storedproc
+            var con = new SqlConnection(ConfigurationManager.ConnectionStrings["ContactDbContext"].ToString());
+            var cmd = new SqlCommand("uspContactShowDetail", con);
+
+            var ds = new DataSet();
+            var da = new SqlDataAdapter();
+
+            cmd.CommandType = CommandType.StoredProcedure;
+            cmd.Parameters.AddWithValue("@PersonID", id);
+            con.Open();
+
+            da.SelectCommand = cmd;
+
+            da.TableMappings.Add("Table", "tblPerson");
+            da.TableMappings.Add("Table1", "tblContactNumbers");
+            da.TableMappings.Add("Table2", "tblEmails");
+            da.Fill(ds);
+            return ds;
         }
+
+
+
     }
 
 }

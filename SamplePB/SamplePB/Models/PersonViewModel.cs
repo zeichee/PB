@@ -12,17 +12,15 @@ namespace SamplePB.Models
     {
         public PersonViewModel()
         {
+
             ContactNumbersViewModels = new List<ContactNumbersViewModel>();
             EmailsViewModels = new ListStack<EmailsViewModel>();
+
         }
 
         public string SearchString { get; set; }
 
         public int PersonId { get; set; }
-
-        public String ContentType { get; set; }
-
-        public Byte[] ActualImage { get; set; }
 
         [Required]
         [StringLength(20,MinimumLength = 2)]
@@ -39,11 +37,11 @@ namespace SamplePB.Models
         [Display(Name = "Middle Name")]
         public string MiddleName { get; set; }
 
-        
+        [Required]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}",
                ApplyFormatInEditMode = true)]
         [DataType(DataType.DateTime)]
-        [StringLength(10, MinimumLength = 10,ErrorMessage = "Format: MM/DD/YYYY")]
+        [StringLength(10, MinimumLength = 10)]
         [Display(Name = "Birth Date")]
         public string BirthDate { get; set; }
 
@@ -55,12 +53,11 @@ namespace SamplePB.Models
         [Display(Name = "Company")]
         public string Company { get; set; }
         public DataSet StoreAllData { get; set; }
+        public DataSet StoreData { get; set; }
 
-        
+        //public List<PersonViewModel> PersonViewModels { get; set; } 
         public List<ContactNumbersViewModel> ContactNumbersViewModels { get; set; }
         [Required]
         public List<EmailsViewModel> EmailsViewModels { get; set; }
-
-
     }
 }

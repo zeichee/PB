@@ -1,53 +1,35 @@
-﻿using System.Net;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net;
 using System.Net.Mail;
+using System.Web;
 using System.Web.Mvc;
+using SamplePB.Models;
 
 namespace SamplePB.Controllers
 {
     public class SendMailerController : Controller
     {
-        //
-        // GET: /SendMailer/
-
+        // GET: /SendMailer/ 
         public ActionResult Index()
         {
             return View();
         }
 
         [HttpPost]
-        public ViewResult Index(SamplePB.Models.MailModel _objModelMail)
+        public void SendEmail(MailModel model)
         {
-            if (ModelState.IsValid)
-            {
-                //hack for auto accepting certificate
-                ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, errors) => true;
+            MailMessage mail = new MailMessage("johnralphdaz@gmail.com", model.To, model.Subject, model.Body);
+            //mail.From = new MailAddress("xxx@gmail.com", "nameEmail");
+            mail.IsBodyHtml = true; // necessary if you're using html email
 
-                var mail = new MailMessage();
-                mail.To.Add(_objModelMail.To);
-                mail.From = new MailAddress(_objModelMail.From);
-                mail.Subject = _objModelMail.Subject;
-                string Body = _objModelMail.Body;
-                mail.Body = Body;
-                mail.IsBodyHtml = true;
-                var smtp = new SmtpClient
-                {
-                    Host = "smtp.gmail.com",
-                    Port = 587,
-                    UseDefaultCredentials = false,
-                    Credentials = new System.Net.NetworkCredential
-                        ("johnralphdaz@gmail.com", "johnralph"),
-                    DeliveryMethod = SmtpDeliveryMethod.Network,
-                    EnableSsl = true,
-                    Timeout = (3 * 60) * 1000
-                };
-                smtp.Send(mail);
-
-                return View("Index", _objModelMail);
-            }
-            else
-            {
-                return View();
-            }
+            NetworkCredential credential = new NetworkCredential("johnralphdaz@gmail.com", "johnralph");
+            SmtpClient smtp = new SmtpClient("smtp.gmail.com", 587);
+            smtp.EnableSsl = true;
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = credential;
+            smtp.Send(mail);
         }
     }
 }
