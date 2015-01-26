@@ -310,8 +310,10 @@ namespace SamplePB.Controllers
             }
             else
             {
-                
-                return View(model);
+
+                TempData["AlertMessage"] = "Please insert a valid contact number!";
+                return RedirectToAction("EditContactNumber", "Contacts", new { id = model.ContactId });
+            
             }
         }
 
@@ -333,10 +335,9 @@ namespace SamplePB.Controllers
 
         public ActionResult DeleteContactNumber(ContactNumbersViewModel model)
         {
-            var obj = new DatabaseOperations();
-
-            obj.DeleteContactNumber(model.ContactId);
-            return RedirectToAction("ShowContactDetails", "Contacts",new {id = model.PersonId});
+                var obj = new DatabaseOperations();
+                obj.DeleteContactNumber(model.ContactId);
+                return RedirectToAction("ShowContactDetails", "Contacts", new { id = model.PersonId });
         }
         #endregion
 
