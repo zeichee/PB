@@ -18,8 +18,8 @@
 
 <div>
     <h5>@Html.ActionLink("Back to List","ShowAllContacts")</h5>
-    <a href="@Url.Action("InsertPersonContactNumber", "Contacts", new { id = Model.PersonId })"><img src="../../images/AddContactNumber.png" height="35" width="125" /></a><br/>
-    <a href="@Url.Action("InsertPersonEmail", "Contacts", new { id = Model.PersonId })"><img src="../../images/AddEmail.png" height="35" width="125" /></a>
+    <a href="@Url.Action("InsertPersonContactNumber", "Contacts", new { id = Model.PersonId })"><img src="../../images/AddPhone.png" height="35" width="135" /></a><br/>
+    <a href="@Url.Action("InsertPersonEmail", "Contacts", new { id = Model.PersonId })"><img src="../../images/AddEmailAddress.png" height="35" width="135" /></a>
     <hr />@using (Html.BeginForm())
           {
               @Html.AntiForgeryToken()
