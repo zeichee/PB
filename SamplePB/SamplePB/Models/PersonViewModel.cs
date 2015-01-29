@@ -4,6 +4,8 @@ using System.ComponentModel.DataAnnotations;
 using System.Data;
 using System.Linq;
 using System.Web;
+using System.Web.Mvc.Html;
+using System.Web.UI.WebControls;
 using Antlr.Runtime.Misc;
 
 namespace SamplePB.Models
@@ -16,7 +18,7 @@ namespace SamplePB.Models
             EmailsViewModels = new ListStack<EmailsViewModel>();
         }
 
-        public string SearchString { get; set; }
+       
 
         public int PersonId { get; set; }
 
@@ -47,16 +49,23 @@ namespace SamplePB.Models
         [Display(Name = "Birth Date")]
         public string BirthDate { get; set; }
 
+
+       
         [StringLength(50)]
         [Display(Name = "Home Address")]
+        
         public string HomeAddress { get; set; }
 
+      
         [StringLength(30)]
         [Display(Name = "Company")]
         public string Company { get; set; }
         public DataSet StoreAllData { get; set; }
 
-        
+        public string SearchString { get; set; }
+
+        public string Result { get; set; }
+
         public List<ContactNumbersViewModel> ContactNumbersViewModels { get; set; }
         [Required]
         public List<EmailsViewModel> EmailsViewModels { get; set; }

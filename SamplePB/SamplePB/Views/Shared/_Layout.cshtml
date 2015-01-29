@@ -16,12 +16,12 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <img src="../../images/LOGO.png" height="40" width="40" />@Html.ActionLink("PhoneBook", "ShowAllContacts", "Contacts", null, new { @class = "navbar-brand" })
+              <a href="@Url.Action("ShowAllContacts","Contacts")"><img src="../../images/LOGO.png" height="40" width="40" /></a> @Html.ActionLink("PhoneBook", "ShowAllContacts", "Contacts", null, new { @class = "navbar-brand" })
             </div>
             <div class="nav navbar-nav navbar-right">
                 <ul class="nav navbar-nav">
 
-                    <li><a href="@Url.Action("InsertContactPerson","Contacts")"><img src="../../images/AddContact.png" height="25" width="25" /></a></li>
+                    <li><a href="@Url.Action("InsertContactPerson","Contacts")"><img src="../../images/AddContact.png" height="25" width="25" title="add contact"/></a></li>
                 </ul>
 
             </div>

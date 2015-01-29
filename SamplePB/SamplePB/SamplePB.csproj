@@ -110,14 +110,21 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
+    <Folder Include="Views\Animation\" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="ContactsDBDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContactsDBDataSet1.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SendMailerController.cs" />
+    <Compile Include="Controllers\WIndowController.cs" />
     <Compile Include="DAL\DatabaseOperations.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -128,6 +135,7 @@
     <Compile Include="Models\MailModel.cs" />
     <Compile Include="Models\PersonViewModel.cs" />
     <Compile Include="Models\PhoneType.cs" />
+    <Compile Include="Models\PrintingReports.cs" />
     <Compile Include="Models\SearchPerson.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -147,6 +155,17 @@
     <Content Include="images\LOGO.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="ContactsDBDataSet1.xsc">
+      <DependentUpon>ContactsDBDataSet1.xsd</DependentUpon>
+    </Content>
+    <None Include="ContactsDBDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>ContactsDBDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <Content Include="ContactsDBDataSet1.xss">
+      <DependentUpon>ContactsDBDataSet1.xsd</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -185,10 +204,14 @@
     <Content Include="Views\Contacts\SearchPerson.cshtml" />
     <Content Include="Views\SendMailer\Index.cshtml" />
     <Content Include="Views\Contacts\ChangeProfilePicture.cshtml" />
+    <Content Include="Views\Contacts\animation.cshtml" />
+    <Content Include="Views\WIndow\Animation.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Reports\ReportContactDetails.rdlc" />
     <EmbeddedResource Include="Reports\ReportContactsList.rdlc" />
+    <EmbeddedResource Include="Reports\ReportEmail.rdlc" />
+    <EmbeddedResource Include="Reports\ReportNumber.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="fonts\glyphicons-halflings-regular.woff" />

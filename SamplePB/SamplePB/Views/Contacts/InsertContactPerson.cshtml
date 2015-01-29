@@ -1,7 +1,9 @@
-﻿@model SamplePB.Models.PersonViewModel
+﻿@using System.Web.UI.WebControls
+@model SamplePB.Models.PersonViewModel
 
 @{
     ViewBag.Title = "Insert Contact Person";
+    var message = TempData["AlertMessage"] ?? string.Empty;
 }
 
 <h2>New Contact</h2>
@@ -15,11 +17,12 @@
     <div class="form-horizontal">
         <hr />
         @Html.ValidationSummary(true)
+        <h3><font color="red">@message</font></h3>
         <table class=" table table-bordered">
             <tr>
                 <td>
                     <input type="file" accept="image/*" onchange="loadFile(event)" name="OriginalLocation" id="OriginalLocation">
-                    <img id="output" height="100" width="100" src="../../images/addphoto.png" alt="Add Picture"/>
+                    <img id="output" height="100" width="100" src="~/images/addphoto.png" alt="Add Picture"/>
                     <script>
                         var loadFile = function (event) {
                             var output = document.getElementById('output');
@@ -27,12 +30,12 @@
                         };
                     </script>
                     
-                    <div class="form-group">
+                    <div class="form-group" >
                         @Html.LabelFor(model => model.LastName, new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
                             @Html.EditorFor(model => model.LastName)
                             @Html.ValidationMessageFor(model => model.LastName)
-                        </div>
+                            </div>
                     </div>
 
                     <div class="form-group">
@@ -54,21 +57,21 @@
                     <div class="form-group">
                         @Html.LabelFor(model => model.BirthDate, new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.BirthDate)
+                            @Html.TextBoxFor(model => model.BirthDate, new { @placeholder = "Optional" })
                             @Html.ValidationMessageFor(model => model.BirthDate)
                         </div>
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.HomeAddress, new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.HomeAddress)
+                            @Html.TextBoxFor(model => model.HomeAddress, new { @placeholder = "Optional" })
                             @Html.ValidationMessageFor(model => model.HomeAddress)
                         </div>
                     </div>
                     <div class="form-group">
                         @Html.LabelFor(model => model.Company, new { @class = "control-label col-md-2" })
                         <div class="col-md-10">
-                            @Html.EditorFor(model => model.Company)
+                            @Html.TextBoxFor(model => model.Company, new { @placeholder = "Optional" })
                             @Html.ValidationMessageFor(model => model.Company)
                         </div>
                     </div>
@@ -79,14 +82,15 @@
         </table>
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Save" class="btn btn-success" name="submit" />
+                <input type="submit" value="Save" class="btn btn-success" name="submit"/>
                 @Html.ActionLink("Cancel", "ShowAllContacts")
             </div>
         </div>
     </div>
 
-}
+
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
+}
 }
